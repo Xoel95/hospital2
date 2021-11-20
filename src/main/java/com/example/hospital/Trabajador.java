@@ -10,10 +10,18 @@ public class Trabajador {
     private String telefono;
 
     public Trabajador() {
-
     }
 
     public Trabajador(String dni, int nss, String nombre, String direccion, String telefono) {
+        this.dni = dni;
+        this.nss = nss;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
+    public Trabajador(int idTrabajador, String dni, int nss, String nombre, String direccion, String telefono) {
+        this.idTrabajador = idTrabajador;
         this.dni = dni;
         this.nss = nss;
         this.nombre = nombre;
