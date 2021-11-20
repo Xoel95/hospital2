@@ -1,4 +1,4 @@
-package com.example.hospital;
+package entity;
 
 public class Consulta {
 

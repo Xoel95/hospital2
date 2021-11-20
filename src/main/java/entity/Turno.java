@@ -1,8 +1,16 @@
-package com.example.hospital;
+package entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 public class Turno {
 
     private int idTurno;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="idtrabajador")
+    private Celador celador;
 
     public Turno() {
     }
@@ -17,6 +25,14 @@ public class Turno {
 
     public void setIdTurno(int idTurno) {
         this.idTurno = idTurno;
+    }
+
+    public Celador getCelador() {
+        return celador;
+    }
+
+    public void setCelador(Celador celador) {
+        this.celador = celador;
     }
 
     @Override

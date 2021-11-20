@@ -1,33 +1,33 @@
-package com.example.hospital;
+package entity;
 
 import java.util.Date;
 
-public class Visita {
+public class Operacion {
 
-    private int idVisita;
+    private int idOperacion;
     private String descripcion;
     private Date fecha;
 
-    public Visita() {
+    public Operacion() {
     }
 
-    public Visita(String descripcion, Date fecha) {
+    public Operacion(String descripcion, Date fecha) {
         this.descripcion = descripcion;
         this.fecha = fecha;
     }
 
-    public Visita(int idVisita, String descripcion, Date fecha) {
-        this.idVisita = idVisita;
+    public Operacion(int idOperacion, String descripcion, Date fecha) {
+        this.idOperacion = idOperacion;
         this.descripcion = descripcion;
         this.fecha = fecha;
     }
 
-    public int getIdVisita() {
-        return idVisita;
+    public int getIdOperacion() {
+        return idOperacion;
     }
 
-    public void setIdVisita(int idVisita) {
-        this.idVisita = idVisita;
+    public void setIdOperacion(int idOperacion) {
+        this.idOperacion = idOperacion;
     }
 
     public String getDescripcion() {
@@ -48,8 +48,8 @@ public class Visita {
 
     @Override
     public String toString() {
-        return "Visita{" +
-                "idVisita=" + idVisita +
+        return "Operacion{" +
+                "idOperacion=" + idOperacion +
                 ", descripcion='" + descripcion + '\'' +
                 ", fecha=" + fecha +
                 '}';

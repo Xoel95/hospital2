@@ -1,13 +1,24 @@
-package com.example.hospital;
+package entity;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name="departments")
 public class Trabajador {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "idtrabajador", nullable = false)
     private int idTrabajador;
     private String dni;
     private int nss;
     private String nombre;
     private String direccion;
     private String telefono;
+
+//    @OneToMany(mappedBy = "employee", cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+//    private List<Task> ltasks;
 
     public Trabajador() {
     }

@@ -1,4 +1,4 @@
-package com.example.hospital;
+package entity;
 
 import java.util.ArrayList;
 
