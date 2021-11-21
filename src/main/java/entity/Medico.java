@@ -1,7 +1,11 @@
 package entity;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 import java.util.ArrayList;
 
+@Entity
+@DiscriminatorValue(value="1")
 public class Medico extends Trabajador {
 
     private ArrayList<Operacion> operaciones;

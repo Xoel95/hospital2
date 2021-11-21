@@ -4,7 +4,10 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="departments")
+@Table(name="trabajadores")
+@Inheritance(strategy= InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="tipo_trabajador",discriminatorType= DiscriminatorType.INTEGER)
+@DiscriminatorValue(value="0")
 public class Trabajador {
 
     @Id

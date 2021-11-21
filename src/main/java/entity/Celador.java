@@ -1,12 +1,13 @@
 package entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 
+@Entity
+@DiscriminatorValue(value="4")
 public class Celador extends Trabajador {
 
-    @OneToMany(mappedBy = "celador", cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    @OneToMany(mappedBy = "celador", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private ArrayList<Turno> turnos;
 
     public Celador() {

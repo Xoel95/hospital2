@@ -1,11 +1,14 @@
 package entity;
 
-import javax.persistence.CascadeType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity
+@Table(name="departments")
 public class Turno {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "idturno", nullable = false)
     private int idTurno;
 
     @ManyToOne(cascade = CascadeType.ALL)
