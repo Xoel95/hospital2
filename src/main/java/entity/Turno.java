@@ -3,15 +3,16 @@ package entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="departments")
+@Table(name="turnos")
 public class Turno {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "idturno", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idturno")
     private int idTurno;
+    private TipoTurno tipo;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch= FetchType.LAZY)
     @JoinColumn(name="idtrabajador")
     private Celador celador;
 

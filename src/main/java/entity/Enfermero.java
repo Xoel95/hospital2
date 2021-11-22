@@ -1,10 +1,10 @@
 package entity;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
+//@PrimaryKeyJoinColumn(name="idtrabajador")
 @DiscriminatorValue(value="2")
 public class Enfermero extends Trabajador {
 

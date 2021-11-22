@@ -11,14 +11,14 @@ public class Main {
         try {
             Trabajador t = new Trabajador("67451283X", 884835, "Pablo",
                     "Calle Shit, 2", "655232323");
-            Celador c = new Celador(t);
             Turno tr = new Turno();
+            Celador c = new Celador(t);
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
             EntityManager em = emf.createEntityManager();
             c.addTurno(tr);
             em.getTransaction().begin();
-            em.persist(t);
             em.persist(tr);
+            em.persist(t);
             em.persist(c);
 
             System.out.println(c);
