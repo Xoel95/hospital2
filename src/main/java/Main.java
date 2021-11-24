@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
 public class Main {
     public static void main(String[] args) {
         try {
-            Trabajador t = new Trabajador("67451283X", 884835, "Pablo",
+            Trabajador t = new Trabajador("67451283X", 884835, "Pepperoni",
                     "Calle Shit, 2", "655232323");
             Turno tr = new Turno();
             Celador c = new Celador(t);
