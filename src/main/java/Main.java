@@ -24,6 +24,7 @@ public class Main {
             System.out.println(c);
             em.getTransaction().commit();
             em.close();
+            System.out.println("Fuck");
             emf.close();
 
         } catch (Exception e) {
