@@ -17,7 +17,7 @@ public class Main {
             EntityManager em = emf.createEntityManager();
             c.addTurno(tr);
             em.getTransaction().begin();
-            //em.persist(tr);
+            em.persist(tr);
             em.persist(t);
             em.persist(c);
 
